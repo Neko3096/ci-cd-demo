@@ -43,7 +43,7 @@ describe('App', () => {
 
     // 关键：等到文本内容真的更新，而不是只等元素出现
     await waitFor(() => {
-      expect(screen.getByTestId('backend-msg')).toHaveTextContent('故意写错的期望值')
+      expect(screen.getByTestId('backend-msg')).toHaveTextContent('Hello from ECS backend')
     })
     expect(screen.getByTestId('backend-version')).toHaveTextContent('test-version')
   })
