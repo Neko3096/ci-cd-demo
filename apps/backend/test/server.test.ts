@@ -6,7 +6,7 @@ describe('backend API', () => {
   it('GET /api/hello 返回问候消息', async () => {
     const res = await request(app).get('/api/hello')
     expect(res.status).toBe(200)
-    expect(res.body).toEqual({ message: 'Hello from ECS backend' })
+    expect(res.body).toEqual({ message: 'Hello from ECS backend v2' })
   })
 
   it('GET /health 返回 200 与 ok', async () => {
