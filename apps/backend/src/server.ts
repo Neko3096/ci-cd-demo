@@ -24,3 +24,7 @@ if (process.env.NODE_ENV !== 'test') {
 }
 
 export default app
+
+// 故障演练 A：故意引入类型错误，用于验证构建失败能否阻断部署
+const brokenValue: number = 'this-is-not-a-number'
+console.log(brokenValue)
