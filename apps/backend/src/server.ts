@@ -9,7 +9,7 @@ const port = Number(process.env.PORT ?? 3000)
 const VERSION = process.env.GIT_SHA ?? process.env.npm_package_version ?? 'dev'
 
 app.get('/api/hello', (_req, res) => {
-  res.json({ message: 'Hello from ECS backend v2' })
+  res.json({ message: 'Hello from ECS backend v3' })
 })
 
 app.get('/health', (_req, res) => res.status(200).send('ok'))
