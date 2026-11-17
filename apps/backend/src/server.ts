@@ -12,14 +12,7 @@ app.get('/api/hello', (_req, res) => {
   res.json({ message: 'Hello from ECS backend v3' })
 })
 
-// 故障演练 B：仅在生产环境让健康检查失败，验证自动回滚
-app.get('/health', (_req, res) => {
-  if (process.env.NODE_ENV === 'production') {
-    res.status(503).send('unhealthy')
-    return
-  }
-  res.status(200).send('ok')
-})
+app.get('/health', (_req, res) => res.status(200).send('ok'))
 
 app.get('/api/version', (_req, res) => res.send(String(VERSION)))
 
